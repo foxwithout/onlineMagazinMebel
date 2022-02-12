@@ -12,7 +12,7 @@ public class OfficeMebel {
         OfficeMebel shkaf = new OfficeMebel("Шкаф", 12);
         OfficeMebel stul = new OfficeMebel("Стул стульный", 11);
 
-        stul.dobavitKolichestvo(5);
+        stul.dobavitKolichestvo(-5);
         System.out.println("Сумма N стульев " + stul.getKolichestvo());
 
         stul.vichestKolichestvo(5);
@@ -26,7 +26,14 @@ public class OfficeMebel {
     }
 
     public void dobavitKolichestvo(int kolichestvo) {
-        this.kolichestvo += kolichestvo;
+        if (kolichestvo > 0) {
+            this.kolichestvo += kolichestvo;
+        } else {
+            System.out.println("Не может быть отрицательным");
+        }
+//        if (kolichestvo < 0) {
+//            System.out.println("Не может быть отрицательным");
+//        }
     }
     public void vichestKolichestvo(int kolichestvo) {
         this.kolichestvo -= kolichestvo;
