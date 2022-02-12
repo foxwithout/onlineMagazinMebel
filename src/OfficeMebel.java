@@ -40,6 +40,9 @@ public class OfficeMebel {
     }
     public void umnozhitKolichestvo(int kolichestvo) {
         this.kolichestvo *= kolichestvo;
+        if (this.kolichestvo > 25) {
+            System.out.println("Склад почти полный");
+        }
     }
     public void delenieKolichestvo(int kolichestvo) {
         this.kolichestvo /= kolichestvo;
