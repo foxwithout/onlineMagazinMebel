@@ -25,6 +25,13 @@ public class Mebelissimo {
 
         }
 
+
+//        OfficeMebel mebel = new OfficeMebel("Стулъ Номер 3");
+//        System.out.println(mebel.getName());
+
+        System.out.println(officeMebels.contains(new OfficeMebel("Стулъ Номер 3", 0)));
+
+
         stul.dobavitKolichestvo(-5);
         System.out.println("Сумма N стульев " + stul.getKolichestvo());
 

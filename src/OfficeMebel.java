@@ -1,11 +1,23 @@
-public class OfficeMebel {
+public class OfficeMebel implements Wooden {
     private String name;
     private double kolichestvo;
 
-    public OfficeMebel(String name, int shtuk) {
-     this.name = name;
-     this.kolichestvo = shtuk;
+    public OfficeMebel(String name) {
+        this.name = name;
+    }
 
+    public OfficeMebel(String name, int shtuk) {
+        this.name = name;
+        this.kolichestvo = shtuk;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof OfficeMebel) {
+            return (name.equals(((OfficeMebel) obj).getName()));
+        } else {
+            return false;
+        }
     }
 
 
@@ -43,5 +55,10 @@ public class OfficeMebel {
     }
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void wood() {
+
     }
 }
